@@ -9,21 +9,47 @@
 # Code :-------
 
 
-# def validPalindrome(str):
-#     l = 0
-#     r = len(str) - 1
+def validPalindrome(str):
+    l = 0
+    r = len(str) - 1
 
-#     while l < r:
-#         if str[l] == str[r]:
-#             l += 1
-#             r -= 1
-#         else:
-#             return False
+    while l < r:
+        if str[l] == str[r]:
+            l += 1
+            r -= 1
+        else:
+            return False
 
-#     return True
+    return True
 
 
 # print(validPalindrome("121"))  True
 # print(validPalindrome("hello")) False
+# print(validPalindrome("A man, a plan, a canal: Panama"))
 
 
+# Code :- Part :- 2 -------------------------------
+
+
+def validPalindrome(str):
+
+    l = 0
+    r = len(str) - 1
+
+    while l < r:
+        while l < r and not str[l].isalnum():
+            l += 1
+
+        while l < r and not str[r].isalnum():
+            r -= 1
+
+        if str[l].lower() != str[r].lower():
+            return False
+
+        l += 1
+        r -= 1
+
+    return True
+
+
+print(validPalindrome("A man, a plan, a canal: Panama"))
