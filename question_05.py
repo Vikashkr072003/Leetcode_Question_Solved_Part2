@@ -79,4 +79,4 @@ def convert(str, numRows):
     return "".join("".join(row) for row in rows)
 
 
-print(convert("ABCDEFGHIJKLMNOP", 5))
+print(convert("PAYPALISHIRING", 3))
