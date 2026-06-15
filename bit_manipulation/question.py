@@ -21,14 +21,35 @@
 # Method First(1) :-- XOR Method:---
 
 
+# def singleNumber(nums):
+#     result = 0
+
+#     for num in nums:
+#         result ^= num
+
+#     return result
+
+
+# arr = [1, 1, 2, 2, 3]
+# print(singleNumber(arr))
+
+
+#  Method Second(2) :-----
+
+
 def singleNumber(nums):
-    result = 0
+
+    hash_map = {}
 
     for num in nums:
-        result ^= num
+        hash_map[num] = hash_map.get(num, 0) + 1
 
-    return result
+    for k in hash_map:
+        if hash_map[k] == 1:
+            return k
+
+    return -1
 
 
-arr = [1, 1, 2, 2, 3]
+arr = [1, 2, 3, 4, 4, 4]
 print(singleNumber(arr))
