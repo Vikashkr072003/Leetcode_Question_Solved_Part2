@@ -27,3 +27,25 @@ Explanation: The next greater element for each value of nums1 is as follows:
 
 # Code :---
 
+
+def nextGraterElment(nums1, nums2):
+    stack = []
+    map_dict = {}
+
+    for num in nums2:
+        while stack and stack[-1] < num:
+            map_dict[stack.pop()] = num
+        stack.append(num)
+
+    result = []
+
+    for num in nums1:
+        result.append(map_dict.get(num, -1))
+
+    return result
+
+
+nums1 = [4, 1, 2]
+nums2 = [1, 3, 4, 2]
+
+print(nextGraterElment(nums1, nums2))
