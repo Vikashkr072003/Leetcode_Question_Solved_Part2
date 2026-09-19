@@ -27,38 +27,38 @@ Explanation: (4 + (13 / 5)) = 6
 # Code :----
 
 
-# def evalReverse(tokens):
-#     stack = []
+def evalReverse(tokens):
+    stack = []
 
-#     for token in tokens:
-#         if token == "+":
-#             b = stack.pop()
-#             a = stack.pop()
-#             stack.append(a + b)
+    for token in tokens:
+        if token == "+":
+            b = stack.pop()
+            a = stack.pop()
+            stack.append(a + b)
 
-#         elif token == "-":
-#             b = stack.pop()
-#             a = stack.pop()
-#             stack.append(a - b)
+        elif token == "-":
+            b = stack.pop()
+            a = stack.pop()
+            stack.append(a - b)
 
-#         elif token == "*":
-#             b = stack.pop()
-#             a = stack.pop()
-#             stack.append(a * b)
+        elif token == "*":
+            b = stack.pop()
+            a = stack.pop()
+            stack.append(a * b)
 
-#         elif token == "/":
-#             b = stack.pop()
-#             a = stack.pop()
-#             stack.append(int(a / b))
+        elif token == "/":
+            b = stack.pop()
+            a = stack.pop()
+            stack.append(int(a / b))
 
-#         else:
-#             stack.append(int(token))
+        else:
+            stack.append(int(token))
 
-#     return stack.pop()
+    return stack.pop()
 
 
-# tokens = ["4", "13", "5", "/", "+"]
-# print(evalReverse(tokens))
+tokens = ["4", "13", "5", "/", "+"]
+print(evalReverse(tokens))
 
 
 def evalReverse(tokens):
