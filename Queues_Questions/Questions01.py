@@ -1,4 +1,4 @@
-# Questions :--- 
+# Questions :--- 933. Number of Recent Calls
 
 """
 Problem Statement:---
@@ -36,5 +36,3 @@ class RecentCounter:
                 count += 1
 
         return count
-
-
